@@ -29,13 +29,11 @@ echo "email: " . $email . "<br>" . "pseudo: " . $pseudo . "<br>" . "mot de passe
 // Ajouter un champ email [✅]
 // Vérifier si le pseudo ou le mot de passe est vide [✅]
 if ( empty( $email ) || empty( $pseudo ) || empty( $password ) ) {
-    echo "Vous avez oublié de rentrer des informations."; // (message à retransmettre sur register.php)
     $redirect = true;
 }
 
 // Ajouter un input confirm password et vérifier si les deux sont égaux [✅]
 if ( "$password" !== "$password2" ) {
-    echo "Les deux mots de passe rentrés sont différents, veuillez rééssayer."; // (message à retransmettre sur register.php)
     $redirect = true;
 }
 
